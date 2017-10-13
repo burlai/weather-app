@@ -7,7 +7,7 @@ h6 {
   margin: 0;
 }
 
-p{
+p {
   margin: 0;
 }
 
@@ -32,3 +32,10 @@ body {
 .l-padding-bottom-20 {
   padding-bottom: 20px;
 }
+
+.l-centered-xs {
+  @include respond(xs,xs) {
+    text-align: center;
+  }
+}
+

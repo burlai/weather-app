@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   background-color: transparent;
   width: 200px;
   cursor: pointer;
@@ -9,10 +10,17 @@
   border: 1px solid #222;
   color: #222;
   text-transform: uppercase;
+  text-decoration: none;
 
   &:hover {
     background-color: #94618e;
     color: white;
     border: 1px solid #94618e;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
   }
 }

@@ -1,5 +1,5 @@
 .content {
-  padding: 120px 0 60px;
+  padding: 85px 0 60px;
   background: url(../images/photo-weather.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -7,9 +7,11 @@
   background-size: cover;
   height: 100%;
 
-  .content_temperature {
+  .content_temperature,
+  .content_celcius {
     font-size: 36px;
     line-height: 36px;
+    display: inline-block;
 
     @include respond(sm) {
       font-size: 40px;
@@ -17,4 +19,38 @@
     }
   }
 
+  .content_temperature {
+    padding-left: 45px;
+  }
+
+  .content_weather-icon {
+    position: absolute;
+    top: 0;
+    height: 40px;
+  }
+
+  .content_weather-description {
+    padding-top: 5px;
+  }
+
+  .content_messages {
+    position: relative;
+    height: 50px;
+  }
+
+  .js-cities-updated,
+  .js-data-updated {
+    position: absolute;
+    top: 0;
+    display: none;
+    padding: 5px 20px;
+    border-radius: 15px;
+    background-color: #1b6d85;
+    color: #fff;
+
+    @include respond(xs,xs) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
