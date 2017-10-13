@@ -1,6 +1,8 @@
 @import "vendor/vendor";
 @import "variables";
-@import "scaffolding";
+@import "mixins/all";
+@import "base/all";
+@import "page-modules/all";
 
 .container {
   margin-top: 33px;

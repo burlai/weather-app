@@ -1,0 +1,16 @@
+.header {
+  background-color: #4abdac;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  .header_h1 {
+    color: $white;
+    font-size: 24px;
+
+    @include respond(sm) {
+      font-size: 30px;
+    }
+  }
+}

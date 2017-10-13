@@ -1,0 +1,46 @@
+/* stylelint-disable */
+@mixin respond($value,$max-value:infinity) {
+	$max-width: $screen-lg;
+	@if $max-value == xs {
+		$max-width: $screen-xs-max;}
+	@else if $max-value == sm {
+		$max-width: $screen-sm-max;}
+	@else if $max-value == md {
+		$max-width: $screen-md-max; }
+
+	@if $value == 'xs' and $max-value == infinity {
+
+			@content;
+	
+	}
+	@else if $value == 'xs' and $max-value != infinity {
+		@media (max-width: $max-width) {
+			@content;
+		}
+	}
+	@if $value == 'sm' and $max-value == infinity {
+		@media (min-width: $screen-sm-min) {
+			@content;
+		}
+	}
+	@else if $value == 'sm' and $max-value != infinity {
+		@media (min-width: $screen-sm-min) and (max-width: $max-width) {
+			@content;
+		}
+	}
+	@else if $value == 'md' and $max-value == infinity {
+		@media (min-width: $screen-md-min) {
+			@content;
+		}
+	}
+	@else if $value == 'md' and $max-value != infinity {
+		@media (min-width: $screen-md-min) and (max-width: $max-width) {
+			@content;
+		}
+	}
+	@else if $value == 'lg'{ // nie powinno byc ograniczenia dla lg poniewaz rozsypie sie wyglad powyzej LG
+			@media (min-width: $screen-lg-min) {
+				@content;
+			}
+	}
+}

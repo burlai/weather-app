@@ -1,0 +1,18 @@
+.button {
+  background-color: transparent;
+  width: 200px;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  color: #222;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #94618e;
+    color: white;
+    border: 1px solid #94618e;
+  }
+}
