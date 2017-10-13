@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb/base",
+  "root": true,
+  "rules": {
+    // disallow strict mode because we use babel
+    "strict": 0,
+    // disallow trailing commas
+    "comma-dangle": [2, "never"],
+    // do not require function expressions to have a name
+    "func-names": 0,
+    // do not require to declare all vars on top of their containing scope
+    "vars-on-top": 0,
+    // disallow declaration of variables that are not used, do not check arguments
+    "no-unused-vars": [2, {"vars": "all", "args": "none"}],
+    // allow reassignment of function parameters with warning
+    "no-param-reassign": 1,
+    // allow just one uninitialized var statement per function
+    "one-var": [2, { "uninitialized": "always" }],
+    // disallow usage of expressions in statement position with exception for ternary
+    "no-unused-expressions": [2, {"allowTernary": true}],
+    // disable padding within blocks rule
+    "padded-blocks": 0,
+    // require a capital letter for constructors
+    "new-cap": 1,
+    // specify the maximum length of a line in your program
+    "max-len": [2, 120, 2, { "ignoreUrls": true, "ignoreComments": false }],
+    // disable arrow-body-style
+    "arrow-body-style": 0,
+    "linebreak-style": 0,
+    "indent": ["error", 4]
+  },
+  "globals": {
+    "window": true
+  }
+}
